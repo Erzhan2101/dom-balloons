@@ -21,13 +21,17 @@
     border: 3px solid black;
 }
 
-.bx {
-    font-size: 100px;
+.bx-refresh {
+    font-size: 150px;
     color: green;
 }
 
 .no-balloons {
     display: flex;
     align-items: center;
+}
+
+.select{
+
 }
 

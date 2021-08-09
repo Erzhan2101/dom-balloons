@@ -1,30 +1,30 @@
-const  balloons = document.querySelectorAll(".balloon")
+const balloons = document.querySelectorAll(".balloon")
 const noBal = document.querySelectorAll(".no-bal")
-const  cls = document.querySelector(".bx")
+const refresh = document.querySelector(".bx-refresh")
 
 let index = 0
 
-cls.addEventListener("click", () =>{
-    noBal.forEach(el => {
-        el.src ="./img/no.gif"
-    })
-    index = 0
-})
-
-
-balloons.forEach( el => {
-    el.addEventListener("click" , () =>{
-        noBal[index++].src = el.src
-    })
-    el.addEventListener("click", () =>{
-        noBal.src = el.src
+refresh.addEventListener("click", () => {
+    noBal.forEach((el) => {
+        el.src = "./img/no.gif"
+        index = 0
     })
 })
 
 
+balloons.forEach(el => {
+    el.addEventListener("click", () => {
+        if (index < 7) {
+            noBal[index].src = el.src
+            index++
+        }
+    })
+})
 
-noBal.forEach(el => {
-    el.addEventListener("click", () =>{
+
+noBal.forEach((el) => {
+    el.addEventListener("click", () => {
         el.src = "./img/no.gif"
     })
 })
+
